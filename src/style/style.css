@@ -10,3 +10,69 @@ body {
   color: #fff;
 }
 
+.game-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #00ff88;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+canvas {
+  border: 2px solid #00ff88;
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.score {
+  font-size: 2rem;
+  margin: 15px 0;
+  text-shadow: 0 0 10px #00ff88;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 15px auto;
+}
+
+.controls {
+  margin: 15px 0;
+  font-size: 0.9em;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.difficulty-selector {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.difficulty-btn {
+  background: linear-gradient(45deg, #333, #555);
+  border: 2px solid #666;
+  padding: 8px 16px;
+  color: #ccc;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 80px;
+}
+
+.difficulty-btn.active {
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #000;
+}
+
+.difficulty-btn:hover:not(.active) {
+    background: linear-gradient(45deg, #555, #777);
+    border-color: #888;
+}
+
