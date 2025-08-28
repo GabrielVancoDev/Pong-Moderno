@@ -10,7 +10,40 @@
       <div class="score">
         <span>Jogador: <span id="playerScore">0</span></span>
         <span style="color: #00ff88; font-size: 0.6em">PONG</span>
+        <span>Computador: <span id="computerScore">0</span></span>
       </div>
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+      <div class="difficulty-selector">
+        <button class="dificulty-btn" onclick="setDiffculty('easy')">
+          Fácil
+        </button>
+        <button class="dificulty-btn" onclick="setDiffculty('normal')">
+          Normal
+        </button>
+        <button class="dificulty-btn" onclick="setDiffculty('hard')">
+          Difícil
+        </button>
+        <button class="dificulty-btn" onclick="setDiffculty('insane')">
+          Insano
+        </button>
+      </div>
+
+      <div class="controls">
+        <div><strong>Controles:</strong></div>
+        <div>⬆️⬇️ - Mover a raquete | ESPAÇO - Pausar | ENTER - Reiniciar</div>
+        <div style="margin-top: 5px; color: #888; font-size: 0.8rem">
+          Dificuldade atual: <span id="currentDifficulty">Normal</span>
+        </div>
+      </div>
+
+      <div class="pause-indicator" id="pauseIndificator">⏸️ PAUSADO</div>
+    </div>
+
+    <div class="game-over" id="gameOver">
+      <h2 id="gameOverTitle">Fim de Jogo!</h2>
+      <p id="gameOverMessage">Você perdeu!</p>
+      <button onclick="restartGame()">Jogar Novamente</button>
     </div>
   </body>
 </html>
