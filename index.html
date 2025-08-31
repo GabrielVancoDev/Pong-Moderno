@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/style.css" />
     <title>Pong | N&G</title>
   </head>
   <body>
@@ -16,18 +16,23 @@
       <canvas id="gameCanvas" width="800" height="400"></canvas>
 
       <div class="difficulty-selector">
-        <button class="difficulty-btn" onclick="setDiffculty('easy')">
-          Fácil
-        </button>
-        <button class="difficulty-btn" onclick="setDiffculty('normal')">
-          Normal
-        </button>
-        <button class="difficulty-btn" onclick="setDiffculty('hard')">
-          Difícil
-        </button>
-        <button class="difficulty-btn" onclick="setDiffculty('insane')">
-          Insano
-        </button>
+        <div class="difficulty-selector">
+          <button class="difficulty-btn" onclick="setDifficulty('easy')">
+            Fácil
+          </button>
+          <button
+            class="difficulty-btn active"
+            onclick="setDifficulty('normal')"
+          >
+            Normal
+          </button>
+          <button class="difficulty-btn" onclick="setDifficulty('hard')">
+            Difícil
+          </button>
+          <button class="difficulty-btn" onclick="setDifficulty('insane')">
+            Insano
+          </button>
+        </div>
       </div>
 
       <div class="controls">
@@ -44,7 +49,7 @@
     <div class="game-over" id="gameOver">
       <h2 id="gameOverTitle">Fim de Jogo!</h2>
       <p id="gameOverMessage">Você perdeu!</p>
-      <button onclick="restartGame()">Jogar Novamente</button>
+      <button onclick="resetGame()">Jogar Novamente</button>
     </div>
 
     <script src="src/script/script.js"></script>
